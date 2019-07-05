@@ -1,1 +1,14 @@
-language:c++
+language:cpp
+
+stages:
+- format
+- static analysis
+- build
+- address sanitizer
+- thread sanitizer
+- undefined behavior sanitizer
+
+matrix:
+  include
+  - os:windows
+    complier:g++

@@ -9,10 +9,13 @@ before_install:
   - sudo apt-get update -qq
 
 install: 
-  - sudo apt-get install -qq g++-7
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 90
-  - sudo apt-get install qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev
-  - sudo apt-get install qt5-default qttools5-dev-tools
+
+  - wget http://download.qt.io/official_releases/qt/5.13/5.13.0/qt-opensource-linux-x64-5.13.0.run
+  - chmod +x qt-opensource-linux-x64-5.7.0.run
+  - ./qt-opensource-linux-x64-5.7.0.run
+  - sudo apt-get install build-essential libfontconfig1 mesa-common-dev libglu1-mesa-dev
+
+
 script: 
   - mkdir -p build
   - cd build

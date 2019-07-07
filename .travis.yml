@@ -13,7 +13,7 @@ install:
   - wget -c http://download.qt.io/official_releases/qt/5.13/5.13.0/qt-opensource-linux-x64-5.13.0.run
   - sudo chmod +x qt-opensource-linux-x64-5.13.0.run
   - sudo chmod +x ./extract-qt-installer
-  - sudo ./extract-qt-install qt-opensource-linux-x64-5.13.0.run /home/root/
+  - sudo ./extract-qt-installer qt-opensource-linux-x64-5.13.0.run /home/root/
   - sudo apt-get install build-essential libfontconfig1 mesa-common-dev libglu1-mesa-dev
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 90
 script: 

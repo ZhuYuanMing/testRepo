@@ -7,12 +7,20 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-set(CMAKE_PREFIX_PATH C:/Qt/5.13.0/mingw73_64/lib/cmake)
+if (UNIX)
+    set(CMAKE_PREFIX_PATH "/home/root/Qt/5.13.0/gcc_64/lib/cmake")
+endif(UNIX)
+if(WIN64)
+    set(CMAKE_PREFIX_PATH C:/Qt/5.13.0/mingw73_64/lib/cmake)
+    include_directories(C:/Qt/5.13.0/mingw73_64/include)
+endif(WIN64)
+
+
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Gui REQUIRED)
 
-include_directories(C:\\Qt\\5.13.0\\mingw73_64\\include)
+
 
 set(UI_FILES)
 set(RC_FILES)

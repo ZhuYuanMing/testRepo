@@ -1,7 +1,14 @@
-#include "../include/test.h"
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
+#include "../include/mainwindow.h"
 
-    return 0;
+#include <QApplication>
+
+//! [0]
+int main(int argc, char *argv[])
+{
+    QApplication app(argc, argv);
+    MainWindow mw;
+    mw.show();
+    return app.exec();
 }
+//! [0]

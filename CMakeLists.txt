@@ -9,7 +9,9 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 if (UNIX)
     set(CMAKE_PREFIX_PATH "/home/root/Qt/5.13.0/gcc_64/lib/cmake")
+    include_directories(/home/root/Qt/5.13.0/mingw73_64/include)
 endif(UNIX)
+
 if(WIN64)
     set(CMAKE_PREFIX_PATH C:/Qt/5.13.0/mingw73_64/lib/cmake)
     include_directories(C:/Qt/5.13.0/mingw73_64/include)
